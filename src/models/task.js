@@ -1,4 +1,4 @@
-// Load mongoose module
+// Load mongoose npm.
 const mongoose = require("mongoose");
 
 // Define the schema Task
@@ -14,7 +14,7 @@ const taskSchema = new mongoose.Schema({
     },
     // we set up a new field call owner.. this is for making the relationship between users and tasks
     owner: {
-        type: mongoose.Schema.Types.ObjectId, // here we are going to store the id of the user that create the task
+        type: mongoose.Schema.Types.ObjectId, // here we are going to store the id of the user that create the particular task
         require: true,
         // ref is to create a reference between this field (owner) with another model ,in our case, with the user model. We put the name of the model .. "User"
         ref: "User"

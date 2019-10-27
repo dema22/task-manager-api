@@ -1,7 +1,8 @@
+// We load the npm mongoose.
 const mongoose = require("mongoose");
 
-// we provided the connection url with the database name as first argument
-// Second argument a configuration object
+// We provided the connection url with the database name as first argument (we use a environment variable).
+// Second argument a configuration object.
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
