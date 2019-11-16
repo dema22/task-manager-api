@@ -129,7 +129,7 @@ router.patch("/users/me", auth, async(req,res) => {
         // Send the updated user back.
         res.send(user);
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).send();
     }
 
 });

@@ -154,7 +154,7 @@ router.delete("/tasks/:id", auth, async (req, res) => {
     const id = req.params.id;
 
     try {
-        // Search the task and delete it ... We check if the actual task match we the id we have and also if the id of the owner.
+        // Search the task and delete it ... We check if the actual task match with the id we have and also with the id of the owner.
         const task = await Task.findOneAndDelete({_id: id, owner: req.user._id});
 
         // if there is no tasks to delete

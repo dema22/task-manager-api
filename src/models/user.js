@@ -13,7 +13,12 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        validate: function(v) {
+            if (typeof v !== 'string') {
+                throw Error('Name must be a string')
+            }
+        }
     },
     email: {
         type: String,
